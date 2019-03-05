@@ -7,6 +7,9 @@
   - [Windows Server 2016 Automation with PowerShell Cookbook - Second Edition][3]
 - Microsoft Virtual Academy
   - [Getting Started with Powershell Desired State Configuration][1]
+- Utilities
+- [ReverseDSC package][15]
+  - This DSC module is used to extract the DSC Configuration of existing environments
 
 ## Overview
 
@@ -19,7 +22,7 @@ remains in that state. It is an essential part of Microsoft's DevOps strategy.
 - Similar to other cross-platform, declarative management products such as [Puppet][4], [Chef][5] and [Ansible][6].
 - Can run in both **push** (Ansible) or **pull** (Puppet, Chef) modes.
 - DSC is available as part of *Windows PowerShell* and *PowerShell Core*.
-- DSC version numbers match the related PowerShell version.
+- DSC version numbers match the related Windows PowerShell version.
 - **Windows PowerShell**
   - First released in version 4 of the [Windows Management Framework][7], in October 2013.
   - Bundled with *Windows Server 2012 R2+* and *Windows 8.1+*.
@@ -29,7 +32,16 @@ remains in that state. It is an essential part of Microsoft's DevOps strategy.
 - **PowerShell Core** 
   - An [open-source][8], cross-platform (Windows, Linux and macOS) version of PowerShell, [generally available (GA) from January 2018][10].
   - Dependent upon the cross-platform [*.NET Core*][12] framework (CoreCLR).
-  - Latest GA version is 6.1.3 (February 19, 2019)
+  - [Latest GA version][13] is 6.1.3 (February 19, 2019)
+- [**PowerShell DSC for Linux**][14]
+  - Supports a Linux-based *Local Configuration Manager (LCM)*, and Linux-based *Resources*.
+  - *Pull Server* must be Windows-based.
+  - Latest release is v1.1.1-926 (January 9, 2019)
+
+## Architecture
+
+By its simplest definition, DSC is a Windows service, a set of configuration files, and a set of
+PowerShell modules and scripts. 
 
 
 [1]: https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-desired-state-configuration-dsc-8672?l=ZwHuclG1_2504984382
@@ -43,3 +55,6 @@ remains in that state. It is an essential part of Microsoft's DevOps strategy.
 [10]: https://devblogs.microsoft.com/powershell/powershell-core-6-0-generally-available-ga-and-supported/
 [11]: https://en.wikipedia.org/wiki/.NET_Framework
 [12]: https://en.wikipedia.org/wiki/.NET_Core
+[13]: https://github.com/PowerShell/PowerShell/releases
+[14]: https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases
+[15]: https://www.powershellgallery.com/packages/ReverseDSC/
