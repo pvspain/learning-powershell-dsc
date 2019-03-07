@@ -21,8 +21,8 @@
   - [Getting Started with Powershell Desired State Configuration][1]
   - [Advanced PowerShell Desired State Configuration (DSC) and Custom Resources][16]
 - Utilities
-- [ReverseDSC package][15]
-  - This DSC module is used to extract the DSC Configuration of existing environments
+  - [ReverseDSC package][15]
+    - This DSC module is used to extract the DSC Configuration of existing environments
 
 ## Overview
 
