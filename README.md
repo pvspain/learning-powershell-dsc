@@ -8,6 +8,9 @@
   - [Overview](#overview)
   - [Architecture](#architecture)
   - [Glossary](#glossary)
+  - [Push and Pull modes](#push-and-pull-modes)
+    - [Pull](#pull)
+    - [Push](#push)
   
 ## Resources
 
@@ -30,7 +33,7 @@ remains in that state. It is an essential part of Microsoft's DevOps strategy.
 
 - Microsoft is a late starter in the DevOps market with DSC.
 - Similar to other cross-platform, declarative management products such as [Puppet][4], [Chef][5] and [Ansible][6].
-- Can run in both **push** (Ansible) or **pull** (Puppet, Chef) modes.
+- Can run in both **push** or **pull** modes, like the other products mentioned above.
 - DSC is available as part of *Windows PowerShell* and *PowerShell Core*.
 - DSC version numbers match the related Windows PowerShell version.
 - **Windows PowerShell**
@@ -76,7 +79,30 @@ there is more to this:
 | Compilation            | Generally a programming term, in this case, it refers to the process of turning a DSC configuration file into an MOF file. |
 | Metadata               | Data that describes other data. Summarizes basic information about other data in a machine-readable format.                |
 
+## Push and Pull modes
 
+The more established CM products available on the market have coalesced into two approaches: **push** and **pull**. These refer to the directions and methods used to move information from the place where it is stored to the **target nodes**.
+
+### Pull
+
+Most CM products primarily use the *pull* method, which means they rely on **agents** to schedule, distribute, and rectify configurations on *target nodes*,  but have a central **server** that holds configuration information and data. 
+
+The *server* maintains the current state of all the *target* nodes, while the *agent* periodically executes configuration runs on the target nodes. This is a simplistic but effective approach, as it enables several highly important features. Because the server has the state of every machine:
+- A queryable record of all servers exists.
+- You can see the state of your entire infrastructure.
+- Configuration runs can be executed on demand against a set of nodes or all nodes.
+
+Popular CM products that primarily use this model are [Puppet][4] and [Chef][5].
+
+### Push
+
+[Ansible][6] primarily uses the *push* model, where a single workstation or user calls the *agent* directly. The user is solely responsible for scheduling executions and resolving all dependencies that the agent needs. It's a loose but flexible network as it allows the agents to operate even if there isn't a central server to report status. This is called a *master-less deployment*. 
+
+The benefit of this model largely depends on your specific use cases. 
+- Some environments need granularity in scheduling and a high level of control over how and when agents perform actions. 
+- They choose when to check for drift, and when to correct drift on a server-to-server basis or an entire environment.
+- Common uses for this approach are test and QA environments, where software configurations change frequently and there is a high expectation of customization.
+  
 [1]: https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-desired-state-configuration-dsc-8672?l=ZwHuclG1_2504984382
 [2]: https://www.packtpub.com/networking-and-servers/learning-powershell-dsc-second-edition
 [3]: https://www.packtpub.com/networking-and-servers/windows-server-2016-automation-powershell-cookbook-second-edition
