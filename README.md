@@ -7,6 +7,7 @@
   - [Windows Server 2016 Automation with PowerShell Cookbook - Second Edition][3]
 - Microsoft Virtual Academy
   - [Getting Started with Powershell Desired State Configuration][1]
+  - [Advanced PowerShell Desired State Configuration (DSC) and Custom Resources][16]
 - Utilities
 - [ReverseDSC package][15]
   - This DSC module is used to extract the DSC Configuration of existing environments
@@ -58,3 +59,5 @@ PowerShell modules and scripts.
 [13]: https://github.com/PowerShell/PowerShell/releases
 [14]: https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases
 [15]: https://www.powershellgallery.com/packages/ReverseDSC/
+[16]: https://mva.microsoft.com/en-US/training-courses/advanced-powershell-desired-state-configuration-dsc-and-custom-resources-8702?l=3DnsS2H1_1504984382
+
