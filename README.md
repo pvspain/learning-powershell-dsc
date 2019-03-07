@@ -1,5 +1,14 @@
 # learning-powershell-dsc
 
+## Content
+
+- [learning-powershell-dsc](#learning-powershell-dsc)
+  - [Content](#content)
+  - [Resources](#resources)
+  - [Overview](#overview)
+  - [Architecture](#architecture)
+  - [Glossary](#glossary)
+  
 ## Resources
 
 - Books
@@ -41,8 +50,31 @@ remains in that state. It is an essential part of Microsoft's DevOps strategy.
 
 ## Architecture
 
-By its simplest definition, DSC is a Windows service, a set of configuration files, and a set of
-PowerShell modules and scripts. 
+By its simplest definition, DSC is:
+-  a Windows service, 
+-  a set of configuration files, and 
+-  a set of PowerShell modules and scripts. 
+
+there is more to this: 
+- push and pull modes, 
+- MOF compilation, and 
+- module packaging
+
+## Glossary 
+
+| Term                   | Description                                                                                                                |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Idempotent             | An operation that can be performed multiple times with the same result.                                                    |
+| DSC configuration file | A PowerShell script file that contains the DSC DSL syntax and list of DSC resources to execute.                            |
+| DSC configuration data | A PowerShell data file or separate code block that defines data that can change on target nodes.                           |
+| DSC resource           | A PowerShell module that contains idempotent functions that brings a target node to a desired state.                       |
+| DSC cmdlets            | PowerShell cmdlets specially made for DSC operations.                                                                      |
+| MOF file               | Contains the machine-readable version of a DSC configuration file.                                                         |
+| LCM                    | The DSC engine that controls the entire execution of DSC configurations.                                                   |
+| CM                     | The process of managing configuration on the servers in your environment.                                                  |
+| Drift                  | A bucket term to indicate the difference between the desired state of a machine and the current state.                     |
+| Compilation            | Generally a programming term, in this case, it refers to the process of turning a DSC configuration file into an MOF file. |
+| Metadata               | Data that describes other data. Summarizes basic information about other data in a machine-readable format.                |
 
 
 [1]: https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-desired-state-configuration-dsc-8672?l=ZwHuclG1_2504984382
