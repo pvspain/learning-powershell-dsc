@@ -72,7 +72,7 @@ there is more to this:
 | DSC configuration data | A PowerShell data file or separate code block that defines data that can change on target nodes.                           |
 | DSC resource           | A PowerShell module that contains idempotent functions that brings a target node to a desired state.                       |
 | DSC cmdlets            | PowerShell cmdlets specially made for DSC operations.                                                                      |
-| MOF file               | Contains the machine-readable version of a DSC configuration file.                                                         |
+| MOF file               | [**Managed Object Format (MOF)**][17]. Contains the machine-readable version of a DSC configuration file.                                                         |
 | LCM                    | The DSC engine that controls the entire execution of DSC configurations.                                                   |
 | CM                     | The process of managing configuration on the servers in your environment.                                                  |
 | Drift                  | A bucket term to indicate the difference between the desired state of a machine and the current state.                     |
@@ -118,3 +118,5 @@ The benefit of this model largely depends on your specific use cases.
 [14]: https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases
 [15]: https://www.powershellgallery.com/packages/ReverseDSC/
 [16]: https://mva.microsoft.com/en-US/training-courses/advanced-powershell-desired-state-configuration-dsc-and-custom-resources-8702?l=3DnsS2H1_1504984382
+[17]: https://www.dmtf.org/sites/default/files/standards/documents/DSP0221_3.0.1.pdf
+[18]: https://www.dmtf.org/standards/cim
